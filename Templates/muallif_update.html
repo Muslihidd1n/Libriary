@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="post">{% csrf_token%}
+        <label>Ism</label>
+        <input type="text" name="ismi" value="{{muallif.ism}}"><br><br>
+        <label>Jins</label>
+        <select name="jinsi">
+            <option>Erkak</option>
+            <option>Ayol</option>
+        </select>
+        <label>Tirik</label>
+        <select name="tirik">
+            <option>Tirik</option>
+            <option>Vafot etgan</option>
+        </select>
+        <label>Tugilgan sana</label>
+        <input type="date" name="tugilgan_sana" value="{{muallif.tugilgan_sana}}">
+        <label>Kitob soni</label><br>
+        <input type="number" name="kitoblar_soni" value="{{muallif.kitoblar_soni}}">
+        <button>Taxrirlash</button>
+</body>
+</html>
+

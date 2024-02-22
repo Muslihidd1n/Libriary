@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form method="get" >
+       <input name="ismi" type="text" placeholder="Muallif ismini yozing">
+        <button>Qidirish</button>
+    </form>
+    <h1>Mualliflar</h1>
+    <br>
+    {%for m in mualliflar%}
+        <h2>{{m.id}}.{{m.ism}}</h2>
+    {% endfor %}
+    <br>
+    <br>
+    <form method="post" action="/h_mualliflar/">{% csrf_token %}
+        {{ forma }}
+
+<!--        <input type="text" name="ismi" placeholder="Muallif ismi">-->
+<!--        <input type="text" name="jinsi" placeholder="Muallif jinsi">-->
+<!--        <input type="date" name="t_sana" placeholder="Tugilgan sana">-->
+<!--        <input type="number" name="k_soni" placeholder="K_s">-->
+<!--        <input type="text" name="Holat" placeholder="holat">-->
+
+        <button type="submit">Malumot qoshish</button>
+    </form>
+</body>
+</html>

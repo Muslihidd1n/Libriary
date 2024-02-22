@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="green">
+    <br>
+    <form method="get">
+        <input name="ismi"  type = 'text' placeholder="Talaba ismini yozing">
+        <button>Qidirish</button>
+    </form>
+    <br>
+    <h1>Hamma studentlar royhati,bir nechta kriteriya boyicha</h1>
+    <br>
+    <br>
+    <hr>
+    {%for student in studentlar%}
+            <h2>{{student.id}}.{{ student.ism}}</h2><br>
+    <a href="/talaba_ochir/{{talaba.id}}"> <button>Ochirish</button></a>
+    <a href="/talaba_update/{{student.id}}"> <button>Taxrirlash</button></a>
+    {% endfor %}
+    <br>
+    <br>
+    <br>
+    <form  method="post">{% csrf_token %}
+
+        {{ forma }}
+<!--        <label>Ismi</label>-->
+<!--        <input type="text" name="ismi" >-->
+<!--        <label>Kursi</label>-->
+<!--        <input type="number" name="kurs"  >-->
+<!--        <label>Kitob soni</label>-->
+<!--        <input type="number" name="kitoblar_soni" >-->
+
+        <button>Malumot qoshish</button>
+    </form>
+</body>
+</html>

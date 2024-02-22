@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">{% csrf_token%}
+        <label>Talaba</label>
+        <input type="text" name="ismi" value="{{record.talaba.ism}}" disabled><br><br>
+        <label>Kitob</label>
+        <input type="text" name="kitob" value="{{kitob.nom}}" disabled><br><br>
+        <label>Kutubxonachi</label><br>
+        <input type="text" name="kutubxonachi" value="{{kutubxonachi_ism}}" disabled>
+        <label>Olingan_sana</label>
+        <input type="date" name="olingan_sana" disabled>
+        <label>Qaytardi</label>
+        <select name="qaytardi">
+            <option>True</option>i
+            <option>False</option>
+        </select>
+        <label>Qayatarish_sana</label>
+        <input type="date" name="qaytarish_sana" value="{{record.qaytarish_sana}}">
+        <button>Taxrirlash</button>
+</body>
+</html>
