@@ -1,7 +1,5 @@
 from django import forms
 from .models import *
-
-
 class TalabaForm(forms.Form):
     i = forms.CharField(label="Ism")
     k = forms.IntegerField(label="Kurs")
